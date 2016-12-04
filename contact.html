@@ -1,0 +1,55 @@
+<!doctype html>
+<head>
+    <link rel="stylesheet" href="css/main.css">
+    <title>M I C A H: Contact</title>
+</head>
+<body>
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <div>
+            <a href="about.html">Who am I</a>
+            <a href="projects.html">Projects</a>
+            <a href="contact.html">Contact</a>
+            <div class="nav-logo">
+                <a href="index.html"><img src="media/svg/logo-w.svg" alt="micah domingo logo"></a>
+            </div>
+        </div>
+    </div>
+    <span class="openbtn" onclick="openNav()">&#9776;</span>
+    <div id="about">
+    	<div>
+            <div class="about-headings">
+        		<h1>Connect <span>&amp;</span> Create</h1>
+            </div>
+            <div class="about-main">
+                <p>Questions? Ideas? Send them to me! Go ahead, leave a message.</p>
+                <p><a href="mailto:mxdmng@gmail.com">EMAIL</a>: mxdmng@gmail.com </p>
+                <form action="mailto:mxdmng@gmail.com" class="contact-form">
+                    <ul>
+                        <li><input type="text" placeholder="Name" />
+                        </li>
+                        <li><input type="text" placeholder="Email" />
+                        </li>
+                        <li><input type="text" placeholder="Subject" />
+                        </li>
+                        <li><textarea placeholder="Message" rows="2"></textarea>
+                        </li><input type="submit" placeholder="Submit" />
+                    </ul>
+                </form>
+                <div class="quote">
+                    <h3>"Do not seek praise. Seek criticism."</h3>
+                </div>
+            </div>
+    	</div>
+    </div>
+</body>
+<script>
+    function openNav() {
+        document.getElementById("mySidenav").style.width = "250px";
+    }
+
+    function closeNav() {
+        document.getElementById("mySidenav").style.width = "0";
+    }
+</script>
+</html>
