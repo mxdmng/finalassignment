@@ -1,15 +1,15 @@
 //fonts
-@import url('https://fonts.googleapis.com/css?family=Montserrat'); //primary-font
+@import url('https://fonts.googleapis.com/css?family=Lato'); //primary-font
 @import url('https://fonts.googleapis.com/css?family=Slabo+27px'); //secondary-font
 
-@primary-font: 'Montserrat', sans-serif;
+@primary-font: 'Lato', sans-serif;
 @secondary-font: 'Slabo 27px', serif;
 
 //colours
-@black: #2E2E2E;
-@bg-white: #fff;
-@white: #edf5e1;
-@blue: #05386B;
+@red: #f54563;
+@bg-white: #ebeae6;
+@white: #ebeae6;
+@blue: #162238;
 
 //animations
 @ease: color 0.5s ease;
@@ -18,19 +18,14 @@
 @base: 15.5px;
 
 //widths
-@max: 1600px;
-@min: 320px;
-
-@large: 1440px;
+@max: 1440px;
 @inbetween: 1240px;
 @medium: 1024px;
-@small: 425px;
-
+@min: 425px;
 
 html, body {
 	margin: 0;
   	padding: 0;
-  	font-size: 62.5%;
   	background-color: @bg-white;
   	-webkit-animation: fadein 1.5s; /* Safari, Chrome and Opera > 12.1 */
     -moz-animation: fadein 1.5s; /* Firefox < 16 */
@@ -59,39 +54,37 @@ html, body {
 
 h1 {
 	font-family: @primary-font;
-	text-transform: uppercase;
-	font-size: 4.5rem;
+	font-size: 3.5em;
 	margin-top: 0;
-	//letter-spacing: 0.25em;
+	letter-spacing: -0.05em;
 }
 
 h2 {
 	font-family: @primary-font;
 	text-transform: uppercase;
-	font-size: 3rem;
+	font-size: 2.5em;
 	margin-top: 0;
-	// letter-spacing: 0.95em;
 }
 
 
 p {
 	font-family: @secondary-font;
-	font-size: 1.6rem;
+	font-size: 1.5em;
 	margin: 0;
 	padding-bottom: 1em;
 }
 
 span {
-	color: @blue;
+	color: @red;
 }
 
 a {
-	color: @black;
+	color: @white;
 	text-decoration: none;
 	&:hover {
 		cursor: pointer;
-		text-transform: lowercase;
-		color: @blue;
+		color: @red;
+		font-style: italic;
 		-webkit-transition: @ease;
 	    -moz-transition: @ease;
 	    -ms-transition: @ease;
@@ -100,151 +93,48 @@ a {
 	}
 }
 
-.sidenav {
-    height: 100%;
-    width: 0;
-    position: fixed;
-    z-index: 1;
-    top: 0;
-    left: 0;
-    background: url("/media/img/background.jpg");
-	background-position: center;
-    overflow-x: hidden;
-    transition: 0.5s;
-    padding-top: 60px;
-    > div {
-    	position: absolute;
-	    bottom: 0;
-	    left: 0;
-	    right: 0;
-	    padding-bottom: 100px;
-	}
-
-    a {
-	    color: @white;
-	    display: block;
-		text-decoration: none;
-		font-family: @primary-font;
-		text-transform: uppercase;
-		text-align: center;
-		padding-bottom: 2em;
-		font-size: 1.6rem;
-		&:hover {
-			cursor: pointer;
-			text-transform: lowercase;
-			color: @blue;
-			-webkit-transition: @ease;
-		    -moz-transition: @ease;
-		    -ms-transition: @ease;
-		    -o-transition: @ease;
-		    transition: @ease;
-		}
-	}
-
-	a.closebtn {
-	    position: absolute;
-	    top: 0;
-	    right: 5px;
-	    color: @black;
-	    display: block;
-		text-decoration: none;
-		font-family: @primary-font;
-		text-transform: uppercase;
-		text-align: center;
-		padding-bottom: 2em;
-		font-size: 10em;
-		&:hover {
-			cursor: pointer;
-			text-transform: lowercase;
-			color: @blue;
-			-webkit-transition: @ease;
-		    -moz-transition: @ease;
-		    -ms-transition: @ease;
-		    -o-transition: @ease;
-		    transition: @ease;
-		}
-	}
-
-	.nav-logo {
-		img {
-			width: 100px;
-			height: 100px;
-			margin: 0 auto;
-			display: block;
-			fill: @white;
-		}
-	}
-
-	@media screen and (max-height: 450px) {
-	  .sidenav {padding-top: 15px;}
-	  .sidenav a {font-size: 18px;}
+.index-topLogo {
+	position: absolute;
+	top: 0;
+	right: 0;
+	img {
+		width: 40%;
+		max-width: 250px;
+		margin: 0 auto;
+		display: block;
 	}
 }
 
-span.openbtn {
-    position: absolute;
-    top: 0;
-    left: 10px;
-    color: @black;
-    display: block;
-	text-decoration: none;
-	font-size: 6em;
-	&:hover {
-		cursor: pointer;
-		text-transform: lowercase;
-		color: @blue;
-		-webkit-transition: @ease;
-	    -moz-transition: @ease;
-	    -ms-transition: @ease;
-	    -o-transition: @ease;
-	    transition: @ease;
+.index-menu {
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	background-color: @blue;
+	ul {
+		width: 80%;
+		margin: 0 auto;
+		padding: 0;
+
 	}
+
+	li {
+		display: inline-block;
+		width: 5%;
+		list-style: none;
+		padding: 1.25em 1.25em 1.25em 1.5em;
+	}
+}
+
+.title {
+	font-size: 6.5em;
 }
 
 #index {
-	width: 100%;
- 	color: @black;
- 	// background-image: url('/media/img/background.jpg');
-	> div {
-		width: 80%;
-		margin: 0 auto;
-		padding: 0;
-	}
-
-	.index-topLogo {
-		width: 100%;
-		padding-bottom: 4%;
-		img {
-		    width: 40%;
-		    max-width: 250px;
-			margin: 0 auto;
-			display: block;
-		}
-	}
-
-	.index-menu {
-		width: 100%;
-		text-align: center;
-		ul, li {
-			margin: 0 auto;
-			padding: 0;
-		}
-
-		li {
-			width: 45%;
-			list-style: none;
-			padding-top: 2%;
-			padding-bottom: 2%;
-		}
-	}
-}
-
-#about {
-	width: 65%;
+	width: 80%;
 	max-width: @max;
 	margin: 0 auto;
+	color: @blue;
 	// margin: 0 auto 0 25%;
- 	color: @black;
 	> div {
 		width: 100%;
 		margin: 0;
@@ -252,61 +142,12 @@ span.openbtn {
 	}
 
 	a {
-		color: @blue;
+		color: @red;
 		text-decoration: none;
 		&:hover {
 			cursor: pointer;
 			text-transform: lowercase;
-			color: @black;
-			-webkit-transition: @ease;
-		    -moz-transition: @ease;
-		    -ms-transition: @ease;
-		    -o-transition: @ease;
-		    transition: @ease;
-		}
-	}
-	.about-headings {
-		text-align: left;
-	}
-
-	.about-main {
-		width: 60%;
-		max-width: 600px;
-		margin: 0 auto;
-	}
-
-	.quote {
-		h3 {
-			margin: 0;
-			padding-bottom: 1em;
-			text-transform: uppercase;
-			font-family: @secondary-font;
-			font-size: 1.8rem;
-			letter-spacing: 0.25em;
-			text-align: center;
-		}
-	}
-}
-
-#projects {
-	width: 60%;
-	max-width: @max;
-	margin: 0 auto;
-	// margin: 0 auto 0 25%;
- 	color: @black;
-	> div {
-		width: 100%;
-		margin: 0;
-		padding: 0;
-	}
-
-	a {
-		color: @blue;
-		text-decoration: none;
-		&:hover {
-			cursor: pointer;
-			text-transform: lowercase;
-			color: @black;
+			color: @blue;
 			-webkit-transition: @ease;
 		    -moz-transition: @ease;
 		    -ms-transition: @ease;
@@ -315,16 +156,17 @@ span.openbtn {
 		}
 	}
 
-	.projects-headings {
+	.index-headings {
 		text-align: left;
 	}
 
-	.projects-main {
-		border-bottom: 1px solid @black;
-		width: 80%;
+	.index-main {
+		border-bottom: 0.125em solid @red;
+		width: 100%;
+		max-width: @inbetween;
 		height: 480px auto;
 		margin: 0 auto;
-		.project-slide {
+		.index-slide {
 			width: 100%;
 			height: 480px auto;
 			img {
@@ -339,7 +181,7 @@ span.openbtn {
 			}
 
 			p {
-				width: 50%;
+				width: 80%;
 				margin: 0 auto;
 			}
 		}
@@ -400,7 +242,7 @@ form.contact-form {
 	        font-family: @primary-font;
 	        font-size: 1.25em;
 	        text-transform: uppercase;
-	        color: @black;
+	        color: @red;
 	        &:hover {
 				cursor: pointer;
 				text-transform: lowercase;
