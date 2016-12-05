@@ -1,48 +1,59 @@
 <!doctype html>
 <head>
     <link rel="stylesheet" href="css/main.css">
-    <title>&amp;count | About</title>
+    <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
+    <title>&amp;count | Dance Tutorial App</title>
 </head>
 <body>
-    <div id="mySidenav" class="sidenav">
-        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-        <div>
-            <a href="index.html">Home</a>
-            <a href="tech.html">About</a>
-            <a href="contact.php">Contact</a>
-            <div class="nav-logo">
-                <a href="index.html"><img src="media/svg/logo-w.svg" alt="micah domingo logo"></a>
-            </div>
+<header>
+    <nav class="header-menu">
+        <a href="index.html"><img src="/images/andcount-logo.png" alt="&amp;count andcount logo"></a>
+        <ul>
+            <a href="index.html"><li>Home</li></a>
+            <a href="tech.html"><li>About</li></a>
+            <a href="contact.php"><li>Contact</li></a>
+        </ul>
+    </nav>
+</header>
+<div id="index">
+    <div>
+        <div class="index-headings">
+            <h1 class="title">What is <i><span>&amp;</span>count</i> ?</h1>
+            
         </div>
+        <div class="about-more">
+            <p><span><i>&amp;</span>count</i> allows users to learn how to dance from their favourite and the best choreographers in the world.</p>
+            <p>What makes <span><i>&amp;</span>count</i> different from other dance tutorial websites and apps is the ability to connect with choreographers and other dancers from around the
+            world.</p>
+            <p>Subscribe to choreographers. Comment, share and
+            even upload your take on choreography taught.  </p>
+        </div>
+        <h2>Now available on the Apple Store</h2>
+        <div class="button"><a href="#" class="btn button-1">Download</a></div>
     </div>
-    <span class="openbtn" onclick="openNav()">&#9776;</span>
-    <div id="about">
-    	<div>
-            <div class="about-headings">
-        		<h1>Connect <span>&amp;</span> Create</h1>
-            </div>
-            <div class="about-main">
-                <p>Questions? Ideas? Send them to me! Go ahead, leave a message.</p>
-                <p><a href="mailto:mxdmng@gmail.com">EMAIL</a>: mxdmng@gmail.com </p>
-                <form action="mailto:mxdmng@gmail.com" class="contact-form">
-                    <ul>
-                        <li><input type="text" placeholder="Name" />
-                        </li>
-                        <li><input type="text" placeholder="Email" />
-                        </li>
-                        <li><input type="text" placeholder="Subject" />
-                        </li>
-                        <li><textarea placeholder="Message" rows="2"></textarea>
-                        </li><input type="submit" placeholder="Submit" />
-                    </ul>
-                </form>
-                <div class="quote">
-                    <h3>"Do not seek praise. Seek criticism."</h3>
-                </div>
-            </div>
-    	</div>
-    </div>
+</div>
 </body>
+<script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+<script type="text/javascript" src="slick/slick.min.js"></script>
 <script>
+    var app = {
+        init: function() {
+            console.log("App Started!");
+            app.slider.init();
+        }
+    }
+
+    app.slider = {
+        init: function() {
+            console.log("app.slider.init");
+            $(".index-main").slick({
+                arrows: false,
+                autoplay: true,
+            });
+        }
+    }
 </script>
+<script type="text/javascript">app.slider.init();</script>
 </html>
