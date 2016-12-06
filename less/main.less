@@ -14,9 +14,6 @@
 //animations
 @ease: color 0.5s ease;
 
-//  base
-@base: 15.5px;
-
 //widths
 @max: 1440px;
 @inbetween: 1240px;
@@ -84,20 +81,6 @@ span {
 	color: @red;
 }
 
-a {
-	color: @white;
-	text-decoration: none;
-	&:hover {
-		cursor: pointer;
-		color: @red;
-		-webkit-transition: @ease;
-	    -moz-transition: @ease;
-	    -ms-transition: @ease;
-	    -o-transition: @ease;
-	    transition: @ease;
-	}
-}
-
 .button {
 	padding: 4em 0;
 	text-align: center;
@@ -105,6 +88,10 @@ a {
 	position: relative;
 	display: inline;
 	margin: 1em;
+	a {
+		color: @red;
+
+	}
 }
 
 .btn {
@@ -120,6 +107,7 @@ a {
 	position: relative;
 	border: 3px solid @red;
 	&:before {
+		color: @red;
 		border: 3px solid @white;
 		background-color: @white;
 		position: absolute;
@@ -127,10 +115,6 @@ a {
 		width: 100%;
 		height: 100%;
 		z-index: -1;
-	}
-	&:after {
-		color: red;
-		text-transform: uppercase;
 	}
 }
 
@@ -185,10 +169,6 @@ a {
 	}
 }
 
-.title {
-	font-size: 6.5em;
-}
-
 #index {
 	width: 100%;
 	max-width: @max;
@@ -205,14 +185,12 @@ a {
 		text-decoration: none;
 		&:hover {
 			cursor: pointer;
-			text-transform: lowercase;
-			color: @white;
-			-webkit-transition: @ease;
-		    -moz-transition: @ease;
-		    -ms-transition: @ease;
-		    -o-transition: @ease;
-		    transition: @ease;
+			color: @red;
 		}
+	}
+
+	.title {
+		font-size: 6.5em;
 	}
 
 	.index-headings {
@@ -228,12 +206,6 @@ a {
 		.index-slide {
 			width: 100%;
 			height: auto;
-			img {
-				width: 100%;
-				height: 480px auto;
-				margin: 0 auto;
-				display: block;
-			}
 			.index-slide-desc {
 				min-height: 250px;
 				h2 {
@@ -252,12 +224,13 @@ a {
 		}
 
 	.index-more {
+		position: relative;
 		width: 60%;
 		opacity: 0.6;
 
 		.grid {
 			position: absolute;
-			top: 100px;
+			// top: 100px;
 			left: 0;
 			width: 1060px;
 			transform: rotateX(60deg) rotateZ(-50deg);
@@ -387,7 +360,7 @@ input[type=submit] {
 	width:auto;
 	background: @red;
 	border:none;
-	color:white;
+	color:@white;
 	cursor:pointer;
 	display:inline-block;
 	float:right;
