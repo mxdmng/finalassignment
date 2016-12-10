@@ -11,9 +11,9 @@
     <nav class="header-menu">
         <a href="index.html"><img src="/images/andcount-logo.png" alt="&amp;count andcount logo"></a>
         <ul>
-            <a href="index.html"><li>Home</li></a>
-            <a href="tech.html"><li>About</li></a>
-            <a href="contact.php"><li>Contact</li></a>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="tech.html">About</a></li>
+            <li><a href="contact.php">Contact</a></li>
         </ul>
     </nav>
 </header>
@@ -138,7 +138,6 @@
       ?>
     </div>
 </div>
-</body>
 <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
 <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
 <script type="text/javascript" src="slick/slick.min.js"></script>
@@ -161,4 +160,5 @@
     }
 </script>
 <script type="text/javascript">app.slider.init();</script>
+</body>
 </html>
